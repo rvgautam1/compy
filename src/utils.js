@@ -29,7 +29,7 @@ const formatPrice = (price) => {
   return formattedPrice;
 };
 
-// In your utils.js, update getStorageItem:
+//  utils.js, update getStorageItem:
 const getStorageItem = (item) => {
   const storageItem = localStorage.getItem(item);
   if (storageItem) {
@@ -37,7 +37,7 @@ const getStorageItem = (item) => {
     
     // Revive Product objects from localStorage
     if (item === 'store' || item === 'wishlist') {
-      return parsed.map(data => new Product(data));
+      return parsed.map(data => data);
     }
     
     return parsed;
